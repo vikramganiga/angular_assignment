@@ -3,16 +3,21 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { GithubFollowersService } from './github-followers.service';
+import { GithubFollowersComponent } from './github-followers/github-followers.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    GithubFollowersComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    GithubFollowersService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
